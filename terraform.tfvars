@@ -1,15 +1,15 @@
 img_name = "san"
 
 tag = [
-    "${var.img_name}:dev"
+  "san:dev"
 ]
 
 arg = {
-    foo : var.imag_name
+  foo : "san"
 }
 
 label_val = {
-    author : "santhosh"
+  author : "santhosh"
 }
 
 new_tag = "santhoshsp/java:v1"

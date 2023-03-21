@@ -3,10 +3,10 @@
 resource "docker_image" "zoo" {
   name = var.img_name
   build {
-    context = "."
-    tag     = var.tag
+    context   = "."
+    tag       = var.tag
     build_arg = var.arg
-    label = var.label_val
+    label     = var.label_val
   }
 }
 
@@ -14,6 +14,7 @@ resource "docker_image" "zoo" {
 # docker cmds 
 resource "null_resource" "demo" {
   provisioner "local-exec" {
-    command = " docker tag ${var.tag} ${var.new_tag} && docker login -u ${var.username} -p ${var.password} && docker push ${var.new_tag}"
+    command = " docker tag san:dev ${var.new_tag} && docker login -u ${var.username} -p ${var.password} && docker push ${var.new_tag}"
   }
 }
+  

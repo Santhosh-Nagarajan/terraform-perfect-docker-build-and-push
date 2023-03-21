@@ -5,17 +5,17 @@ variable "img_name" {
 
 variable "tag" {
   description = "enter your tag name"
-  type        = list
+  type        = list(any)
 }
 
 variable "arg" {
   description = "enter your arg values"
-  type = map
+  type        = map(any)
 }
 
 variable "label_val" {
   description = "enter your label values"
-  type = map
+  type        = map(any)
 }
 
 variable "new_tag" {
